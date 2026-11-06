@@ -44,9 +44,9 @@ in
     '';
 
     systemd.tmpfiles.rules = [
-      "d ${hl.dataRoot}/authentik/postgres 0700 root root -"
-      "d ${hl.dataRoot}/authentik/media 0755 root root -"
-      "d ${hl.dataRoot}/authentik/templates 0755 root root -"
+      "d ${hl.dataRoot}/authentik/postgres 0700 70 70 -"
+      "d ${hl.dataRoot}/authentik/media 0755 1000 1000 -"
+      "d ${hl.dataRoot}/authentik/templates 0755 1000 1000 -"
     ];
 
     # Dedicated network so the containers resolve each other by name.

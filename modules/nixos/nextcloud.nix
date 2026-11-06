@@ -16,7 +16,7 @@ in
     package = lib.mkOption {
       type = lib.types.package;
       # Use the newest nextcloudNN your nixpkgs offers.
-      default = pkgs.nextcloud32;
+      default = pkgs.nextcloud33;
     };
     port = lib.mkOption {
       type = lib.types.port;
@@ -72,7 +72,6 @@ in
 
       phpOptions = {
         "opcache.interned_strings_buffer" = "16";
-        memory_limit = "1G";
       };
     };
 

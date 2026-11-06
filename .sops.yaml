@@ -1,0 +1,7 @@
+keys:
+  - &workhorse age1f889jhrq0xu5ydw6dju0dcvy24efsza2szqmzfknmn2kxr86ysxs85c4gt
+creation_rules:
+  - path_regex: secrets/.*\.yaml$
+    key_groups:
+      - age:
+          - *workhorse
