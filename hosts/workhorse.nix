@@ -20,8 +20,8 @@
   ];
 
   boot.loader.grub = {
-	enable = true;
-	device = "/dev/vda";
+    enable = true;
+    device = "/dev/vda";
   };
   networking.hostName = "workhorse";
   time.timeZone = "America/New_York";

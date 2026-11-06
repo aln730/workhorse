@@ -34,7 +34,7 @@ in
 
     services.nextcloud = {
       enable = true;
-      package = cfg.package;
+      inherit (cfg) package;
       inherit hostName;
       https = true;
       home = "${hl.dataRoot}/nextcloud";
@@ -79,7 +79,7 @@ in
     services.nginx.virtualHosts.${hostName}.listen = [
       {
         addr = "127.0.0.1";
-        port = cfg.port;
+        inherit (cfg) port;
       }
     ];
   };

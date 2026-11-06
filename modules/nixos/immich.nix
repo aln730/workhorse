@@ -30,7 +30,7 @@ in
       enable = true;
       package = pkgs.unstable.immich;
       host = "127.0.0.1";
-      port = cfg.port;
+      inherit (cfg) port;
       mediaLocation = "${hl.dataRoot}/immich";
       # GPU for machine learning:
       # accelerationDevices = [ "/dev/dri/renderD128" ];

@@ -49,7 +49,7 @@ in
 
     networking.nat = {
       enable = true;
-      externalInterface = cfg.externalInterface;
+      inherit (cfg) externalInterface;
       internalInterfaces = [ "wg0" ];
     };
 

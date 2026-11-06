@@ -1,6 +1,5 @@
 # Podman backend for the services that have no NixOS module.
-{ ... }:
-{
+_: {
   virtualisation.podman = {
     enable = true;
     dockerCompat = true;
